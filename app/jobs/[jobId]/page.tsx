@@ -1,6 +1,7 @@
 import JobDetail from '@/app/jobs/[jobId]/JobDetail';
 import { getJob } from '@/lib/getJob';
 import { IJob } from '@/types/jobs';
+import { notFound } from 'next/navigation';
 
 export async function generateMetadata({
   params,
@@ -21,5 +22,10 @@ type Params = {
 };
 export default async function JobPage({ params: { jobId } }: Params) {
   const job: IJob | null = await getJob(jobId);
+
+  if (!job) {
+    notFound();
+  }
+
   return <JobDetail job={job} />;
 }

@@ -9,10 +9,10 @@ const Skeleton = () => {
           >
             <div className='h-2 w-20 bg-slate-300 rounded' />
           </h3>
-          <p className='mt-1 truncate text-sm text-gray-500'>
+          <div className='mt-1 truncate text-sm text-gray-500'>
             {' '}
             <div className='h-4 bg-slate-300 rounded' />
-          </p>
+          </div>
         </div>
         <div className='mt-3 flex sm:ml-4 sm:mt-0'>
           <div className='h-6 bg-slate-400 rounded'></div>

@@ -1,9 +1,9 @@
 import { IJob, IResponse } from '@/types/jobs';
 
 const baseUrl = process.env.REACT_APP_SERVICE_BASE_URL as RequestInfo | URL;
-export const findById = (array: IResponse[], id: number) => {
-  for (let i = 0; i < array.length; i++) {
-    const el: IResponse = array[i];
+export const findById = (data: IResponse[], id: number) => {
+  for (let i = 0; i < data.length; i++) {
+    const el: IResponse = data[i];
 
     if (el.id == id) {
       return el;

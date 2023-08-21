@@ -1,6 +1,7 @@
 import { IJob } from '@/types/jobs';
 import { getFormattedDate, getFormattedDescription } from '@/utils/format';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 
 type JobsProps = {
   job: IJob | null;
