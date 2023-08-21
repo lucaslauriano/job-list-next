@@ -2,6 +2,7 @@
 
 import Logo from '@/app/components/Logo';
 import { Bars3Icon } from '@heroicons/react/20/solid';
+import Link from 'next/link';
 
 interface MobileMenuProps {
   setMobileMenuOpen: any;
@@ -29,23 +30,22 @@ const Menu = ({ setMobileMenuOpen, navigation }: MobileMenuProps) => {
       </div>
       <div className='hidden lg:flex lg:gap-x-12'>
         {navigation.map((item: any) => (
-          <a
+          <Link
             key={item.name}
             href={item.href}
-            target={item.target}
             className='text-sm font-semibold leading-6 text-gray-900'
           >
             {item.name}
-          </a>
+          </Link>
         ))}
       </div>
       <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-        <a
+        <Link
           href='/https://www.jobylon.com/'
           className='text-sm font-semibold leading-6 text-gray-900'
         >
           Log in <span aria-hidden='true'>&rarr;</span>
-        </a>
+        </Link>
       </div>
     </nav>
   );

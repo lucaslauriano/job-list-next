@@ -2,15 +2,12 @@
 
 import Menu from '@/app/components/Menu';
 import MobileMenu from '@/app/components/MobileMenu';
-import { urlUtils } from '@/app/utils/urls';
 import { useState } from 'react';
 
 const navigation = [
-  { name: 'Home', href: '#' },
-  // { name: 'Features', href: '#' },
-  // { name: 'Marketplace', href: '#' },
-  { name: 'GitHub', href: urlUtils.GIT_HUB, target: '_blank' },
-  { name: 'About', href: urlUtils.LINKED_IN, target: '_blank' },
+  { name: 'Home', href: '/' },
+  { name: 'Jobs', href: '/jobs' },
+  { name: 'About', href: '/about' },
 ];
 
 const NavBar = () => {

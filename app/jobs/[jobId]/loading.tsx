@@ -1,7 +1,7 @@
 import Skeleton from '@/app/components/Skeleton';
 
-const JobsLoading = () => {
+const JobLoading = () => {
   return <Skeleton />;
 };
 
-export default JobsLoading;
+export default JobLoading;

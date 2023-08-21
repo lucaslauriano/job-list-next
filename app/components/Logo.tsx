@@ -1,6 +1,6 @@
 'use client';
 
-import { urlUtils } from '@/app/utils/urls';
+import { urlUtils } from '@/utils/urls';
 import Image from 'next/image';
 const Logo = () => {
   return (

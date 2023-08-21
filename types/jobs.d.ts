@@ -1,21 +1,4 @@
-export interface IJob {
-  id: number;
-  company: ICompany;
-  contact: IContact;
-  descr: string;
-  employment_type: string;
-  experience: string;
-  from_date: string;
-  function: string;
-  language: string;
-  title: string;
-  urls: IUrl;
-  owner: IOwner;
-  skills: string;
-  locations: ILocations[];
-}
-
-export interface ICompany {
+export interface ICompanys {
   id: number;
   slug: string;
   name: string;
@@ -27,6 +10,8 @@ export interface ICompany {
   cover: string;
 }
 
+export type ICompany = Omit<ICompanys, 'id'>;
+
 export interface IContact {
   name?: string;
   email?: string;
@@ -36,16 +21,16 @@ export interface IContact {
 
 export interface ILocation {
   location: {
-    text?: string;
     area_2_short?: string;
     city?: string;
     area_1_short?: string;
     area_2?: string;
     area_1?: string;
+    place_id?: string;
+    url?: string;
     country?: string;
     city_short?: string;
-    url?: string;
-    place_id?: string;
+    text?: string;
   };
 }
 
@@ -65,24 +50,21 @@ export interface IOwner {
   email?: string;
 }
 
+type T = /*unresolved*/ any;
+
 export interface IResponse {
   id: number;
-  benefits: [];
-  catogories: [];
+  benefits: Array<T>;
+  catogories: Array<T>;
   company: ICompany;
   contact: IContact;
-  departaments: [];
+  departaments: Array<T>;
   descr: string;
   employment_type: string;
   experience: string;
   from_date: string;
   function: string;
   language: string;
-  layers_1: [];
-  layers_2: [];
-  layers_3: [];
-  layers_4: [];
-  layers_5: [];
   linkedInCompanyId: number;
   locations: ILocation[];
   slug: string;
@@ -93,4 +75,7 @@ export interface IResponse {
   internal_reference: null;
   owner: IOwner;
   skills: string;
+  application_date_is_hidden: true;
 }
+
+export type IJob = Omit<IResponse, 'id'>;
