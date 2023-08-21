@@ -1,3 +1,4 @@
+'use client';
 import Logo from '@/app/components/Logo';
 import { Dialog } from '@headlessui/react';
 import XMarkIcon from '@heroicons/react/20/solid/XMarkIcon';
