@@ -1,7 +1,8 @@
 'use client';
 
 import Logo from '@/app/components/Logo';
-import { Bars3Icon } from '@heroicons/react/20/solid';
+import { UserIcon } from '@heroicons/react/20/solid';
+import Bars3Icon from '@heroicons/react/20/solid/Bars3Icon';
 import Link from 'next/link';
 
 interface MobileMenuProps {
@@ -40,12 +41,15 @@ const Menu = ({ setMobileMenuOpen, navigation }: MobileMenuProps) => {
         ))}
       </div>
       <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
-        <Link
-          href='/https://www.jobylon.com/'
-          className='text-sm font-semibold leading-6 text-gray-900'
-        >
-          Log in <span aria-hidden='true'>&rarr;</span>
-        </Link>
+        <span className='inline-block h-8 w-8 overflow-hidden rounded-full bg-gray-100'>
+          <svg
+            className='h-full w-full text-gray-300'
+            fill='currentColor'
+            viewBox='0 0 24 24'
+          >
+            <path d='M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z' />
+          </svg>
+        </span>
       </div>
     </nav>
   );

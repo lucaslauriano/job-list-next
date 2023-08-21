@@ -1,5 +1,5 @@
-import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
 import React, { useState } from 'react';
+import MagnifyingGlassIcon from '@heroicons/react/20/solid/MagnifyingGlassIcon';
 
 type SearchInputProps = {
   onSearch: (searchTerm: string) => void;
@@ -25,10 +25,10 @@ const SearchInput = ({ onSearch }: SearchInputProps) => {
       <div className='flex rounded-md shadow-sm'>
         <div className='relative flex-grow focus-within:z-10'>
           <div className='pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3'>
-            {/* <MagnifyingGlassIcon
+            <MagnifyingGlassIcon
               className='h-5 w-5 text-gray-400'
               aria-hidden='true'
-            /> */}
+            />
           </div>
           <input
             type='text'

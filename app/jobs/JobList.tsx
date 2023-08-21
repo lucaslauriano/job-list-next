@@ -32,14 +32,14 @@ const JobList = () => {
   };
 
   return (
-    <>
-      <div className='border-b border-gray-200 pb-5 sm:flex sm:items-center sm:justify-between mt-16'>
-        <h3 className='text-base font-semibold leading-6 text-gray-900'>
+    <div className='mb-16 bg-white px-6 py-24 sm:py-16'>
+      <div className='border-b border-gray-200 pb-5 sm:flex sm:items-center sm:justify-between'>
+        <h3 className='text-base font-semibold leading-6 text-gray-900 '>
           Job Postings
         </h3>
         <SearchInput onSearch={handleSearch} />
       </div>
-      <div className='rounded-md border-2 mt-12 px-6 py-0 border-gray-50'>
+      <div className='rounded-md border-2 mt-6 px-6 py-0 border-gray-50'>
         <ul className='divide-y divide-gray-100'>
           {filteredJobs.length === 0 ? (
             <>No Data</>
@@ -84,7 +84,7 @@ const JobList = () => {
           )}
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 export default JobList;
