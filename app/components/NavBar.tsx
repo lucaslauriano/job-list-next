@@ -14,7 +14,7 @@ const NavBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className='bg-white'>
+    <nav className='bg-white' data-testid='navbar__nav'>
       <Menu setMobileMenuOpen={setMobileMenuOpen} navigation={navigation} />
       <MobileMenu
         mobileMenuOpen={mobileMenuOpen}

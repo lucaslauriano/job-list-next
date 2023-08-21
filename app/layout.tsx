@@ -1,3 +1,4 @@
+import Footer from '@/app/components/Footer';
 import './globals.css';
 import NavBar from '@/app/components/NavBar';
 import type { Metadata } from 'next';
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body className={inter.className} suppressHydrationWarning={true}>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );

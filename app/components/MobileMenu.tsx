@@ -1,6 +1,6 @@
 import Logo from '@/app/components/Logo';
 import { Dialog } from '@headlessui/react';
-import { XMarkIcon } from '@heroicons/react/20/solid';
+import XMarkIcon from '@heroicons/react/20/solid/XMarkIcon';
 
 interface MobileMenuProps {
   mobileMenuOpen: boolean;
@@ -25,6 +25,7 @@ const MobileMenu = ({
           <Logo />
           <button
             type='button'
+            data-testid='navbar__mobile-menu-button'
             className='-m-2.5 rounded-md p-2.5 text-gray-700'
             onClick={() => setMobileMenuOpen(false)}
           >
