@@ -1,7 +1,6 @@
 'use client';
 
 import Logo from '@/app/components/Logo';
-import { UserIcon } from '@heroicons/react/20/solid';
 import Bars3Icon from '@heroicons/react/20/solid/Bars3Icon';
 import Link from 'next/link';
 

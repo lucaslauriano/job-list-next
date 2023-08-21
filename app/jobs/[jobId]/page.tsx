@@ -1,6 +1,7 @@
 import JobDetail from '@/app/jobs/[jobId]/JobDetail';
+import { getAllJobs } from '@/lib/getAllJobs';
 import { getJob } from '@/lib/getJob';
-import { IJob } from '@/types/jobs';
+import { IJob, IResponse } from '@/types/jobs';
 import { notFound } from 'next/navigation';
 
 export async function generateMetadata({
@@ -28,4 +29,12 @@ export default async function JobPage({ params: { jobId } }: Params) {
   }
 
   return <JobDetail job={job} />;
+}
+
+export async function generateStaticParams() {
+  const jobData = await getAllJobs();
+
+  return jobData.map((job: IResponse) => ({
+    jobId: job.id.toString(),
+  }));
 }

@@ -9,6 +9,7 @@ describe('SearchInput component', () => {
     fireEvent.change(input, { target: { value: 'test' } });
     expect(input.value).toBe('test');
   });
+
   test('should call the onSearch callback with the correct search term when input value changes', () => {
     const onSearch = jest.fn();
     render(<SearchInput onSearch={onSearch} />);

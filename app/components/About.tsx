@@ -1,4 +1,5 @@
-import { PaperClipIcon } from '@heroicons/react/20/solid';
+'use client';
+
 import Link from 'next/link';
 
 const About = () => {

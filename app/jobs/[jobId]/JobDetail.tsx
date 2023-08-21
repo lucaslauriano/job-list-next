@@ -1,3 +1,5 @@
+'use client';
+
 import { IJob } from '@/types/jobs';
 import { getFormattedDate, getFormattedDescription } from '@/utils/format';
 import Link from 'next/link';
@@ -9,8 +11,8 @@ type JobsProps = {
 
 const JobDetail = ({ job }: JobsProps) => {
   return (
-    <>
-      <div className='border-b border-gray-200 pb-5 sm:flex sm:items-center sm:justify-between mt-16'>
+    <div className='mb-16 bg-white px-6'>
+      <div className='border-b  border-gray-200 pb-5 sm:flex sm:items-center sm:justify-between mt-16'>
         <div className='sm:w-0 sm:flex-1'>
           <h3
             id='message-heading'
@@ -118,14 +120,14 @@ const JobDetail = ({ job }: JobsProps) => {
         </dl>
       </div>
       {job?.from_date && (
-        <dt className='text-sm font-medium leading-6 text-gray-900'>
+        <dt className='pb-20 text-sm font-medium leading-6 text-gray-900'>
           Created at
           <p className='mt-1 truncate text-sm text-gray-500'>
             {getFormattedDate(job?.from_date)}
           </p>
         </dt>
       )}
-    </>
+    </div>
   );
 };
 

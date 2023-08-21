@@ -1,3 +1,5 @@
+'use client';
+
 import { urlUtils } from '@/utils/urls';
 
 const navigation = [
@@ -37,7 +39,7 @@ const navigation = [
 const Footer = () => {
   return (
     <footer className='bg-white fixed w-full bottom-0 '>
-      <div className='py-4 md:flex md:items-center md:justify-between lg:px-8'>
+      <div className='py-8 pt-4 md:flex md:items-center md:justify-between lg:px-8'>
         <div className='flex justify-center space-x-6 md:order-2'>
           {navigation.map((item) => (
             <a
