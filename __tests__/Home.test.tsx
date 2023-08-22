@@ -15,7 +15,7 @@ describe('Home Page ', () => {
     expect(screen.getByText(/Find the best jobs./i)).toBeInTheDocument();
   });
 
-  test('renders the "Visit the job posting page" link', () => {
+  test('should renders the "Visit the job posting page" link', () => {
     render(<Home />);
 
     const link = screen.getByRole('link', {
@@ -25,7 +25,7 @@ describe('Home Page ', () => {
     expect(link).toHaveAttribute('href', '/jobs');
   });
 
-  test('applies correct styling to the link', () => {
+  test('should applies correct styling to the link', () => {
     render(<Home />);
 
     const link = screen.getByRole('link', {

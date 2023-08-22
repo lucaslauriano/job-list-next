@@ -38,7 +38,7 @@ describe('About Component', () => {
     expect(jsonLinkElement).toHaveAttribute('target', '_blank');
   });
 
-  test('renders the correct use-case steps', () => {
+  test('should renders the correct use-case steps', () => {
     render(<About />);
     const userTypesUrlStep = screen.getByText(
       'User types a URL in the browser'

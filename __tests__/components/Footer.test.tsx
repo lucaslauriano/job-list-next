@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import Footer, { footerNavigation } from '@/app/components/Footer';
 
 describe('Footer Component', () => {
-  test('renders navigation items correctly', () => {
+  test('should renders navigation items correctly', () => {
     render(<Footer />);
     const linkElements = screen.getAllByRole('link');
 
