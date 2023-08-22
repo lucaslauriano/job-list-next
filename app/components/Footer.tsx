@@ -1,8 +1,9 @@
 'use client';
 
 import { urlUtils } from '@/utils/urls';
+import Link from 'next/link';
 
-const navigation = [
+export const footerNavigation = [
   {
     name: 'Linkedin',
     href: urlUtils.LINKED_IN,
@@ -41,8 +42,8 @@ const Footer = () => {
     <footer className='bg-white fixed w-full bottom-0 '>
       <div className='py-8 pt-4 md:flex md:items-center md:justify-between lg:px-8'>
         <div className='flex justify-center space-x-6 md:order-2'>
-          {navigation.map((item) => (
-            <a
+          {footerNavigation.map((item) => (
+            <Link
               key={item.name}
               href={item.href}
               target='_blank'
@@ -50,7 +51,7 @@ const Footer = () => {
             >
               <span className='sr-only'>{item.name}</span>
               <item.icon aria-hidden='true' />
-            </a>
+            </Link>
           ))}
         </div>
         <div className='mt-8 md:order-1 md:mt-0'>
