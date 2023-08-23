@@ -30,7 +30,7 @@ describe('NotFound Component', () => {
     expect(link).toHaveAttribute('href', '#');
   });
 
-  it('applies correct styling to the "Go back home" link', () => {
+  it('should applies correct styling to the "Go back home" link', () => {
     render(<NotFound />);
     const link = screen.getByRole('link', { name: /Go back home/i });
     expect(link).toHaveClass('bg-indigo-600');

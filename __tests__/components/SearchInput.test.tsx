@@ -13,7 +13,7 @@ describe('SearchInput component', () => {
     expect(mockOnSearch).toHaveBeenCalledWith('test');
   });
 
-  test('displays mobile input by default', () => {
+  test('should displays mobile input by default', () => {
     render(<SearchInput onSearch={() => {}} />);
 
     const mobileInput = screen.getByTestId('mobile-search-job');
@@ -40,7 +40,7 @@ describe('SearchInput component', () => {
     expect(mockOnSearch).toHaveBeenCalledWith('test');
   });
 
-  test('displays desktop input when screen size is not small', () => {
+  test('should displays desktop input when screen size is not small', () => {
     Object.defineProperty(window, 'innerWidth', {
       value: 1024,
       writable: true,
@@ -54,7 +54,6 @@ describe('SearchInput component', () => {
     expect(mobileInput).toBeInTheDocument();
     expect(desktopInput).toBeInTheDocument();
 
-    // Resetting the window.innerWidth to its original value
     Object.defineProperty(window, 'innerWidth', {
       value: global.innerWidth,
       writable: false,
